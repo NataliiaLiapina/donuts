@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap');
+html,
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+h1,
+h2,
+h3{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+$header_height: 70px;
+$red: #E6012C;
+header{
+    background: $red;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 16px 16px 16px;
+    position: relative;
+    height: $header_height;
+    box-sizing: border-box;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+        width: calc(100% - 32px);
+        height: 1px;
+        background: #fff;
+    }
+}
+.site-branding{
+    img{
+        width: auto;
+        height: 24px;
+    }
+}
+.main-navigation{
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    max-height: 0;
+    top: $header_height;
+    left: 0;
+    z-index: 100;
+    transition: 0.3s;
+    &.open{
+        transform: scaleY(1);
+        max-height: 100vh;
+        width: 100%;
+        li.menu-item{
+            padding: 21px;
+            background: #fff;
+            transition: 0.3s;
+            &:hover{
+                transition: 0.3s;
+                a{
+                    color: $red;
+                }
+            }
+            &:hover::before{
+                width: 0;
+            }
+            a{
+                color: #000;
+            }
+        }
+    }
+}
+.main-screen{
+    height: calc(100vh - $header_height);
+    min-height: 575px;
+    background: $red;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    position: relative;
+    h1{
+        font-family: 'Unbounded', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 51px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 14px;
+        max-width: 393px;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        @media screen and (min-width: 380px){
+            font-size: 42px;
+        }
+    }
+    .main-screen_donut{
+        position: absolute;
+        top: -15px;
+        right: 0;
+    }
+    .video-container {
+        position: relative;
+       max-width: 385px;
+        width: 100%;
+        height: 700px;
+        margin: 220px auto 0;
+        border-radius: 35px;
+        @media screen and (min-width: 380px){
+            height: 800px;
+            border-radius: 55px;
+        }
+        .frame{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .farme-part{
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            @media screen and (min-width: 380px){
+                top: 20px;
+            }
+        }
+        .video {
+            position: absolute;
+            top: 15px;
+            right: 3.5%;
+            bottom: 20px;
+            left: 5%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 43px;
+            z-index: 1;
+            @media screen and (min-width: 380px){
+                top: 20px;
+                bottom: 22px;
+            }
+            video{
+                height: 833px;
+            }
+        }
+    }
+    .video-bottom{
+        font-family: 'Unbounded', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #000000;
+        text-align: center;
+        margin-top: 6px;
+    }
+}
+.about{
+    padding: 450px 16px 16px;
+    @media screen and (min-width: 380px){
+        padding: 528px 16px 16px;
+    }
+    h2{
+        font-family: 'Rubik', sans-serif;
+        font-weight: 900;
+        font-size: 42px;
+        line-height: 128%;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+    p{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 128%;
+        text-align: right;
+        color: #000000;
+    }
+}
+.main-donuts{
+    margin-top: -95px;
+    img{
+        display: block;
+        margin: 0 0 0 auto;
+        max-width: 410px;
+        width: 100%;
+    }
+}
+.begushchaya-stroka{
+    width:598px;
+    height:28px;
+    margin: -35px auto 0;
+    line-height:28px;
+    padding-bottom: 67px;
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 39.756px;
+    line-height: 47px;
+    color: #000000;
+}
